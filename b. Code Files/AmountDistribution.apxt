@@ -1,0 +1,21 @@
+trigger AmountDistribution on Appointment__c (before insert, before update) {
+
+    
+
+    if(trigger.isbefore && trigger.isinsert || trigger.isupdate){
+
+        AmountDistributionHandler.amountDist(trigger.new);
+
+        
+
+    }
+
+
+}
+
+//Team ID: 		NM2024TMID19222
+//Team Members: 	Hariharasudhan - 76D08B3DC527C0E93A5450BF079C16D6
+//Hashier Shaikh - 8B22CDD12461C278E94455F8F95A89E9
+//Athiharan - 1116A1339AAF74AA3E0445D430EE048D
+//Institution/Organization: 7125 – PPG Institute of Technology 
+//Team GitHub Link: 	https://github.com/hrs7x/GarageManagementSystem_Salesforce_NM
